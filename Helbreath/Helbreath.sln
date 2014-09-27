@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbreath", "Helbreath\Helbreath.csproj", "{0F564314-D638-4D69-A524-9BB7D142663A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbreath.Tests", "Helbreath.Tests\Helbreath.Tests.csproj", "{8AA49EC4-44EE-4B0E-909C-5D8BE72E7F4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F564314-D638-4D69-A524-9BB7D142663A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F564314-D638-4D69-A524-9BB7D142663A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F564314-D638-4D69-A524-9BB7D142663A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F564314-D638-4D69-A524-9BB7D142663A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA49EC4-44EE-4B0E-909C-5D8BE72E7F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA49EC4-44EE-4B0E-909C-5D8BE72E7F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA49EC4-44EE-4B0E-909C-5D8BE72E7F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA49EC4-44EE-4B0E-909C-5D8BE72E7F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
