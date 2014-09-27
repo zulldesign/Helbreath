@@ -185,6 +185,7 @@
     <Compile Include="Controllers\Helbreath,Legion,DownloadsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LegionController.cs" />
+    <Compile Include="Controllers\storylineController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -249,6 +250,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\storyline_files\Thumbs.db" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\Helbreath Legion - Downloads_files\button.php" />
     <Content Include="Images\Helbreath Legion - Downloads_files\dropdown.css" />
@@ -262,6 +264,35 @@
     <Content Include="Images\Helbreath Legion_files\scripts.js" />
     <Content Include="Images\Helbreath Legion_files\style.css" />
     <Content Include="Images\Helbreath Legion_files\votenew.jpg" />
+    <Content Include="Images\storyline_files\00menu.jpg" />
+    <Content Include="Images\storyline_files\Abaddon.gif" />
+    <Content Include="Images\storyline_files\aresden-large.gif" />
+    <Content Include="Images\storyline_files\arrow.gif" />
+    <Content Include="Images\storyline_files\background.gif" />
+    <Content Include="Images\storyline_files\banner.jpg" />
+    <Content Include="Images\storyline_files\battlegolem.gif" />
+    <Content Include="Images\storyline_files\bottom-left.jpg" />
+    <Content Include="Images\storyline_files\bottom-middle-sml.jpg" />
+    <Content Include="Images\storyline_files\bottom-right.jpg" />
+    <Content Include="Images\storyline_files\bsteed.gif" />
+    <Content Include="Images\storyline_files\Copy %282%29 of menu_array.js" />
+    <Content Include="Images\storyline_files\Copy %283%29 of menu_array.js" />
+    <Content Include="Images\storyline_files\Copy of menu_array.js" />
+    <Content Include="Images\storyline_files\credit.jpg" />
+    <Content Include="Images\storyline_files\darkshadowknight.gif" />
+    <Content Include="Images\storyline_files\elvine-large.gif" />
+    <Content Include="Images\storyline_files\hbcss.css" />
+    <Content Include="Images\storyline_files\HELBRE3_r3_c5.jpg" />
+    <Content Include="Images\storyline_files\HELBRE3_r5_c4.jpg" />
+    <Content Include="Images\storyline_files\heldenian_header2.jpg" />
+    <Content Include="Images\storyline_files\left-side.jpg" />
+    <Content Include="Images\storyline_files\menu.js" />
+    <Content Include="Images\storyline_files\menu_array.js" />
+    <Content Include="Images\storyline_files\skyscraper.htm" />
+    <Content Include="Images\storyline_files\top-left.jpg" />
+    <Content Include="Images\storyline_files\top-right.jpg" />
+    <Content Include="Images\storyline_files\ts1.htm" />
+    <Content Include="Images\storyline_files\urchin.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -317,6 +348,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Legion\Index.cshtml" />
     <Content Include="Views\Helbreath_Legion_Downloads\Index.cshtml" />
+    <Content Include="Views\storyline\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
