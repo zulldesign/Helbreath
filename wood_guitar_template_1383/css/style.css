@@ -1,0 +1,229 @@
+body {
+margin: 0;
+padding: 0; 
+background-color: #993300;
+clear: both;
+}
+
+#container{
+margin: 0px auto;
+width: 888px;
+background-image: url(../images/sfondocorpo.jpg);
+background-repeat: repeat-y;
+height: 100%;
+overflow: hidden;
+}
+/* beginning top part */
+#header{
+margin: 0px auto;
+width: 740px;
+height: 244px;
+background-image: url(../images/corpohead.jpg);
+background-repeat: repeat-y;
+}
+
+#top{
+margin: 0px auto;
+width: 740px;
+height: 12px;
+background-image: url(../images/ombrasu.jpg);
+background-position: top;
+background-repeat: no-repeat;
+}
+
+#middle{
+margin: 0px auto;
+width: 740px;
+height: 220px;
+background-image: url(../images/header.jpg);
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#title{
+width: 400px;
+height: 100px;
+float: right;
+text-align: right;
+color: #ffffff;
+margin-top: 34px;
+padding-right: 60px;
+}
+
+#down{
+margin: 0px auto;
+width: 740px;
+height: 12px;
+background-image: url(../images/ombragiu.jpg);
+background-position: bottom;
+background-repeat: no-repeat;
+}
+
+/* end top part*/
+/* start main part*/
+#main {
+margin: 0px auto;
+width: 888px;
+height: 100%;
+overflow: hidden;
+}
+
+#mainleft{
+width: 264px;
+float: left;
+}
+
+
+#contmenu{
+width: 264px;
+height: 278px;
+background-image: url(../images/menuback.jpg);
+background-repeat: no-repeat;
+float: left;
+}
+
+#menu{
+width: 120px;
+height: 200px;
+margin: 43px 34px 35px 110px;
+}
+
+/* menu formatting*/
+
+#menu ul{
+margin-left: 5px;
+padding-left: 5px;
+}
+
+#menu ul li{
+margin-top: 10px;
+list-style-type: none;
+}
+
+#menu ul li a{
+font-family: Verdana, Arial, san-serif, Times;
+font-size: 12px;
+color: #663333;
+text-decoration: none;
+}
+
+/*end menu*/
+/*undermenu round links*/
+.roundcontainer{
+width: 157px;
+height: 108px;
+float: right;
+}
+
+.roundcontainer a img{
+text-decoration: none;
+border: none;
+}
+/*content formatting*/
+
+
+#changing{
+margin-top: 0px;
+width: 560px;
+height: 100%;
+float: left;
+overflow: hidden;
+}
+
+#words{
+margin-top: 0px;
+width: 560px;
+height: 95px;
+background-image: url(../images/words.jpg);
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#left{
+margin-top: 0px;
+width: 330px;
+float: left;
+overflow: hidden;
+}
+
+#right{
+margin-top: 0px;
+width: 230px;
+float: right;
+overflow: hidden;
+}
+
+.flowerlarge{
+width: 330px;
+height: 40px;
+margin-top: 5px;
+background-image: url(../images/flowerlarge.jpg);
+background-repeat: no-repeat;
+text-align: right;
+}
+
+.flowersmall{
+width: 230px;
+height: 40px;
+margin-top: 5px;
+background-image: url(../images/flowerlarge.jpg);
+background-repeat: no-repeat;
+text-align: right;
+}
+
+.squaresmall{
+margin-top: 10px;
+margin-left: 20px;
+width: 200px;
+background-color: #ffffff;
+border: 1px solid #cc9999;
+}
+
+.squaresmall p{
+padding: 10px;
+}
+
+/* text formatting*/
+#footer{
+margin: 0px auto;
+width: 888px;
+height: 86px;
+background-image: url(../images/foot.jpg);
+background-repeat: no-repeat;
+}
+
+
+/* text formatting*/
+h3{
+font-family: Verdana, Arial, Times, san-serif;
+font-size: 12px;
+font-weight: bold;
+color: #663333;
+}
+
+p{
+font-family: Verdana, Arial, Times, san-serif;
+font-size: 11px;
+color: #333333;
+padding-left: 20px;
+}
+
+#credits{
+line-height: 30px;
+font-family: "Trebuchet MS", Verdana, Arial, san-serif;
+font-size: 11px; 
+text-align: center;
+color: #cc9966;
+}
+
+#credits a{
+text-decoration: none;
+font-weight: bold;
+color: #cc9966;
+}
+
+#credits a:hover{
+text-decoration: underline;
+font-weight: bold;
+color: #ffffff;
+}

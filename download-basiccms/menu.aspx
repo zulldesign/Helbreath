@@ -1,0 +1,1 @@
+<p class="myfont"><a href="list.aspx" title="Show All Pages">Page List</a> | <a href="upload.aspx" title="Upload and Delete Files">File Management</a> | <a href="login.aspx?logout=1" title="Logout of Basic CMS">Logout</a></p>

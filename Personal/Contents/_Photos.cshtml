@@ -1,0 +1,27 @@
+﻿@{
+    //Set Flickr parameters
+    string flickrKey = "";
+    string flickrUserName = "";
+}
+
+@if (String.IsNullOrEmpty(flickrKey) || String.IsNullOrEmpty(flickrUserName)) {
+    <p>
+        Welcome to the Photos Page! Please look at the Contents/_Photos.cshtml page and set up Flickr photo display.
+        You can get Flickr API keys from the <a href="http://www.flickr.com/services/apps/create/apply">Flickr Website</a>.
+    </p>
+} else {
+    var photos = Flickr.GetPhotos(flickrKey, flickrUserName);
+    <h1>My Flickr Photos</h1>
+    <ul class="thumbnails">
+        @foreach (var item in photos) {
+            if (item.PhotoUrl != null) {
+                <li>
+                    <a href="@item.WebUrl" target="_blank">
+                        <img src="@item.PhotoUrl" alt="Photo of @item.Title" class="thumbnail-border"/>
+                        <span class="image-overlay">@item.Title</span>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+}

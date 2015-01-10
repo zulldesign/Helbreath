@@ -1,0 +1,349 @@
+/* HTML Reset - Leave this alone */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End HTML Reset */
+
+
+/* Custom Fonts */
+
+@font-face {
+    font-family: 'WalkwaySemiBoldRegular';
+    src: url('fonts/Walkway_SemiBold-webfont.eot');
+    src: url('fonts/Walkway_SemiBold-webfont.eot?iefix') format('eot'),
+         url('fonts/Walkway_SemiBold-webfont.woff') format('woff'),
+         url('fonts/Walkway_SemiBold-webfont.ttf') format('truetype'),
+         url('fonts/Walkway_SemiBold-webfont.svg#webfontGYMf4jLH') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'WalkwayBoldRegular';
+    src: url('fonts/Walkway_Bold-webfont.eot');
+    src: url('fonts/Walkway_Bold-webfont.eot?iefix') format('eot'),
+         url('fonts/Walkway_Bold-webfont.woff') format('woff'),
+         url('fonts/Walkway_Bold-webfont.ttf') format('truetype'),
+         url('fonts/Walkway_Bold-webfont.svg#webfontr5UVwlDI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'WalkwayUltraBoldRegular';
+    src: url('fonts/Walkway_UltraBold-webfont.eot');
+    src: url('fonts/Walkway_UltraBold-webfont.eot?iefix') format('eot'),
+         url('fonts/Walkway_UltraBold-webfont.woff') format('woff'),
+         url('fonts/Walkway_UltraBold-webfont.ttf') format('truetype'),
+         url('fonts/Walkway_UltraBold-webfont.svg#webfontr3mJms8F') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* End Custom Fonts */
+
+
+/* Main Styles */
+
+html,body,#background,#wrapper { height:100%; }
+
+body { 
+	background: url(images/HBUSA-Background.jpg) repeat-x center bottom fixed;	
+	font-family: arial,helvetica,sans-serif;
+	font-size: 14px;
+	line-height: 145%;
+}
+
+h1, h2, h3, h4 { margin-bottom: 10px; display: inline-block; font-family: WalkwayUltraBoldRegular, Arial, Sans-Serif; }
+
+h1 { font-size: 36px; }
+h2 { font-size: 32px; line-height: 1; }
+h3 { font-size: 23px; }
+h4 { font-size: 18px; }
+
+
+#wrapper {
+	margin: 0 auto;
+	width: 960px;	
+}
+#topnav {
+	background: #ded1c9;
+	height: 20px;
+}
+#header {
+	margin: 10px 0;
+}
+#contenttop {
+	height: 30px;
+	background: url(images/content-top.png) no-repeat top left;
+}
+#maincontent {
+	padding: 10px;
+	background-color: #f9ecd9;
+	background: url(images/Texture0108.jpg);
+	color: black;
+	/*
+	text-shadow: black 1px 1px 1px;	
+	-moz-text-shadow: black 1px 1px 1px;
+	*/
+	zoom: 1;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#contentbot{
+	height: 30px;
+	background: url(images/content-bot-temp.png) no-repeat top left;
+}
+#mainleft { 
+	float: left; 
+	width: 650px; 
+}
+#mainright {
+	float: right; 
+	width: 310px; 
+	margin-top: -34px;
+}
+#left { 
+	float: left; 
+	width: 140px;
+	background-color: #f9ecd9;
+	background: url(images/Texture0108.jpg);
+	padding: 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#right {
+	float: right;
+	width: 480px;
+	margin-left: 10px;
+}
+#leftimage {
+	background: url(images/left-image-trans.png) no-repeat;
+	width: 160px;
+	height: 222px;
+	margin: -10px 0 -10px -10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#adspace{
+	background-color: #f9ecd9;
+	padding: 20px 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+}
+#footer{
+	width: 950px;
+	text-align: center;
+	background-color: #f9ecd9;
+	background: url(images/Texture0108.jpg);
+	padding: 5px;
+	font-size: 12px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.clear {
+	clear: both;
+	height: 20px;
+}
+p { padding-bottom: 10px; }
+#left ul { padding: 0 0 10px 10px; }
+#maincontent ul { padding-left: 20px; list-style-type: disc; padding-bottom: 10px; }
+#maincontent li { padding: 5px 0; }
+
+.date { 
+	text-align: center;
+	background: #000;
+	color: #f9ecd9;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+	float: left;
+	padding: 2px 4px;
+	margin: 10px 10px 0px 10px;
+	text-shadow: none;
+	-moz-text-shadow: none;
+	width: 90px;
+}
+
+.newstitle { width: 96%; cursor: pointer; line-height: 100%; color: #DC3522; }
+li.newsitem { background: #f7f7f7; border-radius: 5px; margin-bottom: 10px; width: auto; overflow: hidden; }
+li.newsitem:hover { background: #fff; }
+li.newsitem h3 { margin-bottom: 0; padding: 10px; }
+li.newsitem .content { padding: 10px 20px; }
+li.newsitem h3 span { font-family: arial, helvetica, sans-serif; border-radius: 50%; background: #000; height: 24px; width: 24px; display: inline-block; text-align: center; margin-left: 10px; float: right; }
+
+#homenewslist h3.newstitle { max-width: 320px; }
+
+.newsdate { float: left; color: #DC3522; }
+
+.newsdate:hover, .newstitle:hover { text-decoration: underline; }
+
+ol li {
+	list-style-type: decimal;
+	margin-left: 20px;
+}
+
+ol li ul li {
+	list-style-type: disc;
+}
+
+table { 
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100% !important;
+	margin-bottom: 10px;
+}
+
+table caption {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	width: 448px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+td, th {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	text-align: left;
+	padding: 5px;
+}
+
+#newslist li, #homenewslist li, #eklist li, #eventlist li , #Introductionlist li, #questlist li { 
+	list-style-type: none;
+	padding: 0;
+} 
+
+#newslist li ul li, #homenewslist li ul li, #eventlist li ul li, #Introductionlist li ul li , #questlist li ul li{ 
+	list-style-type: disc;
+	padding: 0;
+} 
+
+#newslist, #eklist, #homenewslist, #eventlist, #Introductionlist, #questlist {
+	padding: 0 !important;
+}
+
+#thumbs img { 
+	margin-right: 10px;
+}
+
+.killer, .corpse, .location {
+	display: inline-block;
+	width: 33%;
+	*float: left;
+}
+
+#maincontent div.content p {
+	margin: 0;
+}
+
+.content { overflow: hidden; }
+
+.highlight { background-color: #DC3522; }
+
+.floatright {
+	width: 48%;
+	float: right;
+}
+
+.floatleft {
+	width: 48%;
+	float: left;
+}
+
+.floatcontainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.otherlists { float: right; }
+
+/* End Main Styles */
+
+
+/* Link Styles */
+
+a, a:active, a:visited { 
+	color: #DC3522;
+	text-decoration: none;
+	/*text-shadow: none;
+	-moz-text-shadow: none;
+	font-weight: bold;*/
+	cursor: pointer;
+}
+
+a:hover {	
+	text-decoration: underline;
+}
+
+
+.simplePagerNav a { display: inline-block; color: #F9ECD9 !important; padding: 2px 5px; background: black; text-decoration: none; }
+.simplePagerNav a:hover, .currentPage a:hover { text-decoration: none; color: #DC3522 !important; }
+.currentPage a { background: none !important; border: 1px solid black; color: black !important; }
+.simplePagerNav li { list-style-type: none; display: inline; margin-right: 5px; }
+.simplePagerNav { margin: 10px 0 10px 0; display: inline-block; padding: 0 !important; }
+
+.simpleCaptchaSelected { background-color: white; }
+
+#uploadmessage { font-weight: bold; };
+
+/* End Link Styles */

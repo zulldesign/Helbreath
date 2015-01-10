@@ -1,0 +1,73 @@
+Thank you for purchasing My ASP Affiliate Program V4
+M.A.A.P. Is the easiest, fastest and cheapest way to deploy an affiliate tracking system into your online shop.
+It works perfect with small Paypal enabled instant purchase stores.
+I designed it for my own store but it works with any store whereby the customer is sent to a final "Thank you page"
+The commission structure is limited to a fixed fee per sale.(except for PayPal stores)
+
+
+
+Requirements:
+
+1. Windows Webserver (NT, W2K, IIS etc.)
+2. Server side includes enabled server (SSI)
+3. Basic HTML knowledge
+4. 1 ODBC connection to Ms Access ( For DSN-less connection, please rename and use dsnless-affiliate.asp. also edit and change DBQ= to be the correct server path )
+
+
+Installation:
+
+1. Add all files to your webserver, including the folder "Connections".
+
+2. Set up an ODBC to affiliate.mdb called "affiliate". (make sure the database is in a writable folder)
+
+3. In your main/entry/home page insert the following ssi code right at the top of the page, before <html>.
+<!--#include file="setcookies.asp" -->
+
+4. In your "Thank you page" insert the following ssi code right at the top of the page, before <html>.
+<!--#include file="setcommission.asp" -->
+
+5. Rename your main/entry and Thankyou page to end with ".asp" (.html file cannot execute ssi codes)
+
+6. Run admin.asp in your browser, Login as 123456, Click on settings and configure it as you wish.
+
+That's it!!!
+
+
+
+For PayPal IPN Use Only:
+
+Basically same as above but do NOT do step 4. Instead, enable IPN in your paypal account and point it to the ipn.asp file.
+Then edit all your PayPal buttons on your site and Add this line:
+
+<input type="hidden" name="custom" value="<%= Request.Cookies("Affidcookie") %>">
+
+Then do Step 5/6.
+
+That's it! It will work with both fixed and percent commission.
+
+
+
+
+
+Send affiliates through a link on your site to "affiliates.asp", here they can sign up or login to check their stats.
+
+Your administration page is "admin.asp" which i suggest you to rename to something less obvious.
+
+- Password to /admin.asp is "123456". You can change this in the admin page.
+
+
+
+
+How it works.:
+
+Affiliates receive a url with ?Affid=xxx added to the end, where xxx is their unique code. When a visitor comes through to your site on that link, a cookie is set on his/her machine with the value of that code. After shoping, when the visitors reaches the "Thank you page" the cookie is converted into a session variable on the server, the affiliates database is then filtered and the appropriate affiliate gets his commmission.
+
+
+-You may also want to edit affiliates.asp to change fonts, colours, background, and to customize the layout to blend in with your site.
+
+
+It really is very simple. But if you need help, either email me at johnny@kattouf.com 
+
+Enjoy!!
+
+//Johnny

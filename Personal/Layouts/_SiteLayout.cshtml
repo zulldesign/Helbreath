@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>@Page.Title</title>
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="~/Scripts/modernizr-2.5.3.js"></script>
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        <div id="page" class="group">
+            <header>
+                <p class="title">Your Name</p>
+                <p>Let's write a bit about you. Since this is a personal site, tell us something funny. 
+                Something insightful. Something deep. Maybe you like green eggs and ham? Or long walks on the beach?</p>
+                <nav>
+                    <ul>
+                        @foreach (var contentPage in App.ContentPages) {
+                            if (contentPage.Title == Page.Title) {
+                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header" class="current">@contentPage.Header</a></li>
+                            } else {
+                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header">@contentPage.Header</a></li>
+                            }
+                        }
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+    </body>
+</html>

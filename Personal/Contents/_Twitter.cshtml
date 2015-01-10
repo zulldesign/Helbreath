@@ -1,0 +1,42 @@
+﻿@{
+    // provide your Twitter screen name
+    string screenName = "";
+}
+
+@if (String.IsNullOrEmpty(screenName)) {
+    <p>
+        Welcome to the Twitter Page! Please view the Contents/_Twitter.cshtml page and fill out your Twitter screen name.
+    </p>
+} else {
+    var tweets = TwitterHelper.GetUserTimelime(screenName);
+    if (tweets.Count > 0) {
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+        foreach (var item in tweets) {
+            <article class="twitteritem">
+                <div class="twitterbody">
+                    <header>
+                        <h1>@item.Title</h1>
+                    </header>
+                    <p>@Html.Raw(item.HtmlContent)</p>
+                    <p class="pubdate">Tweeted <span>@item.PublishedDate.ToLocalTime().DateTime.ToShortTimeString()</span></p>
+                    <ul class="twitterActions hide-from-mobile">
+                        @TwitterHelper.ReplyToTweet(item.Id)
+                        @TwitterHelper.Retweet(item.Id)
+                        @TwitterHelper.FavoriteTweet(item.Id)
+                    </ul>
+                </div>
+
+                <!-- Seperate set of links for jquery mobile -->
+                <div class="twitterActions hide-from-desktop" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    @TwitterHelper.ReplyToTweet(item.Id)
+                    @TwitterHelper.Retweet(item.Id)
+                    @TwitterHelper.FavoriteTweet(item.Id)
+                </div>
+            </article>
+
+        }
+    } else {
+        <p>There was a problem contacting Twitter: you may be behind a proxy or have hit your request limit temporarily.</p>
+    }
+}

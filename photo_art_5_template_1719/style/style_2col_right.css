@@ -1,0 +1,321 @@
+/* global */
+html{height: 100%;}
+
+body
+{ font-family: arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-size: .78em;
+  background: #3F3F3F url(pattern.png) repeat;
+  color: #555;
+}
+
+p
+{ margin: 0px;
+  padding: 0px 0px 16px 0px;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4
+{ font-family: tahoma, arial, sans-serif;
+  font-size: 120%;
+  letter-spacing: .1em;
+  padding: 7px 0px 5px 0px; 
+  margin: 0px 0px 12px 0px; 
+  color: #555;
+}
+
+h4
+{ font-family: arial, sans-serif;
+  font-size: 110%;
+  color: #555;
+}
+
+img
+{ border: 0px; 
+  margin: 0px; 
+  padding: 0px;
+}
+
+a{outline: none;}
+
+form{padding: 0; margin: 0;}
+
+/* image positioning - left, right and center */
+.left
+{ float: left; 
+  border-right: 18px solid;
+}
+
+.right
+{ float: right; 
+  border-left: 18px solid;
+}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.left, .right{border-color: #FFF;}
+
+/* block quote */
+blockquote
+{ margin: 20px 0px 20px 0px; 
+  padding: 10px 20px 0px 20px;
+  border-left: 8px solid #4D4D4D;
+}
+
+/* unordered list */
+ul
+{ margin: 2px 0px 18px 16px;
+  padding: 0px;
+}
+
+ul li
+{ list-style-type: square;
+  margin: 0px 0px 6px 0px; 
+  padding: 0px;
+}
+
+/* ordered list */
+ol
+{ margin: 8px 0px 0px 24px;
+  padding: 0px;
+}
+
+ol li
+{ margin: 0px 0px 11px 0px; 
+  padding: 0px;
+}
+
+/* margin lefts / margin rights - to centre content */
+#main, #footer, #logo, #menubar, #site_content
+{ margin-left: auto; 
+  margin-right: auto;
+}
+
+/* main container */
+#main
+{ width: 776px;
+  background: #FFF url(main.png) repeat-y;
+  color: #555;
+}
+
+/* logo */
+#logo
+{ width: 760px;
+  height: 238px;
+  border-top: 1px solid #F2F2F0;
+  background: #444 url(logo.jpg) no-repeat left center;
+  color: #FFF;
+}
+
+/* navigation menu */
+#menubar
+{ background: #686868 url(menu.png) repeat;
+  width: 760px;
+  border-top: 1px solid #7D7D7D;
+  height: 70px;
+} 
+
+ul#menu{margin: 0px;}
+
+ul#menu li
+{ float: left; 
+  margin: 0px 0px 0px 0px; 
+  padding: 0px;
+  list-style: none;
+} 
+
+ul#menu li a 
+{ font-family: verdana, sans-serif;
+  display: block; 
+  float: left; 
+  height: 44px;
+  text-decoration: none; 
+  padding: 26px 15px 0px 15px;
+  text-align: center;
+  border-right: 1px solid #7D7D7D;
+  background: transparent;
+  color: #AAA;
+} 
+
+ul#menu li a:hover, ul#menu li a.current, ul#menu li a.current:hover
+{ background: transparent;
+  color: #FFF;
+} 
+
+#search
+{ float: right; 
+  padding: 22px 15px 0px 0px;
+}
+
+input.searchfield
+{ background: #FFF; 
+  border: 1px solid #777; 
+  padding: 2px;
+}
+
+input.searchbutton
+{ background: #3F3F3F; 
+  border: 1px solid #777; 
+  padding: 0px;
+  color: #FFF;
+  width: 64px;
+  cursor: pointer;
+}
+
+/* main content */
+#site_content
+{ width: 760px;
+  overflow: hidden;
+} 
+
+/* sidebar */
+.sidebar
+{ float: right;
+  width: 190px;
+  padding: 15px 15px 15px 15px;
+}
+
+/* sidebar items / links */
+.sidebaritem
+{ text-align: left;
+  width: 190px;
+  float: left;
+  margin: 0px 0px 15px 0px;
+}
+
+.sidebaritem h1, .sidebaritem h3, .sidebaritem p{margin: 8px 10px 10px 12px;}
+
+.sidebaritem ul
+{ border-top: 1px solid #D4D4D4;
+  width: 160px; 
+  padding-top: 4px; 
+  margin: 4px 0px 15px 14px;
+}
+
+.sidebaritem li
+{ list-style: none; 
+  padding: 0px 0px 4px 0px; 
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.sidebaritem li a, .sidebaritem li a:hover
+{ height: 16px;
+  text-decoration: none; 
+  background: transparent url(arrow.png) no-repeat left center;
+  color: #555;
+  padding: 0px 0px 0px 18px;
+  display: block;
+} 
+
+.sidebaritem li a.current, .sidebaritem li a:hover, .sidebaritem li a.current:hover
+{ background: transparent url(arrow_select.png) no-repeat left center;} 
+
+/* page content */
+#content_container
+{ text-align: left;
+  width: 525px;
+  float: left;
+  padding: 15px 0px 15px 15px;
+}
+
+#content
+{ text-align: left;
+  width: 495px;
+  padding: 8px 15px 8px 15px;
+}
+
+#content a
+{ background: transparent;
+  color: #555;
+  border-bottom: 1px dotted;
+}
+
+#content a:hover
+{ background: transparent;
+  color: #A4A4A4;
+}
+
+.sidebaritem, #content{background: #FFF;}
+
+/* footer */
+#footer
+{ width: 720px;
+  height: 42px;
+  padding: 28px 21px 0px 19px;
+  text-align: center; 
+  border-top: 2px solid #F2F2F0;
+  background: #686868 url(menu.png) repeat;
+  color: #AAA;
+}
+
+#footer a
+{ background: transparent;
+  color: #FFF;
+}
+
+#footer a:hover
+{ background: transparent;
+  color: #AAA;
+}
+
+#content a, #content a:hover, #footer a, #footer a:hover{text-decoration: none;}
+
+/* Based on Nifty Corners: rounded corners without images */
+/* By Alessandro Fulciniti */
+/* http://www.html.it/articoli/nifty/index.html */
+.rtop, .rbottom{display: block; background: #E5E5E5;}
+
+.rtop .r1, .rtop .r2, .rtop .r3, .rtop .r4,
+.rbottom .r1, .rbottom .r2, .rbottom .r3, .rbottom .r4
+{ display: block;
+  height: 1px;
+  overflow: hidden; 
+  background: #FFF;
+}
+
+.r1{margin: 0 5px;}
+
+.r2{margin: 0 3px;}
+
+.r3{margin: 0 2px;}
+
+.rtop .r4, .rbottom .r4
+{ margin: 0 1px;
+  height: 2px;
+}
+
+/* sNews */
+fieldset, .comment, .commentsbox
+{ margin-bottom: 10px; 
+  background: transparent; 
+  color: #444;
+}
+
+fieldset
+{ border: 1px solid #D4D4D4; 
+  padding: 10px 8px;   
+}
+
+input{padding: 2px;}
+
+textarea
+{ width: 95%; 
+  height: 200px;
+  padding: 3px;
+}
+
+.comment
+{ background: #F1F1F1; 
+  color: #444;
+}
+
+.date
+{ border-top: 1px solid #D4D4D4; 
+  margin: 15px 0px 5px 0px;
+  font-weight: bold;
+}

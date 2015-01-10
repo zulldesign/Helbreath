@@ -1,0 +1,48 @@
+﻿@{
+    // get the ID of the requested content 
+    string id = UrlData[0];
+
+    // if the Id is not specified, forward back to the home page
+    if (id.IsEmpty()) {
+        Response.Redirect("~/");
+        return;
+    } else {
+        ContentSource requestedContent = null;
+
+        // look for the content item matching this id
+        foreach (ContentSource content in App.ContentPages) {
+            if (content.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) {
+                requestedContent = content;
+                break;
+            }
+        }
+
+        // if we didn't find the matching content with the requested Id, forward back to the home page
+        if (requestedContent == null) {
+            Response.Redirect("~/");
+            return;
+        }
+
+        // set page title
+        Page.Title = requestedContent.Title;
+
+        if (requestedContent.ShouldCacheContent) {
+            // try getting the content from the cache first
+            string cacheKey = "__CONTENT__" + id;
+            string contentString = WebCache.Get(cacheKey);
+
+            // if it's not in the cache, render the page dynamically to get the content
+            if (contentString == null) {
+                HelperResult renderedPageContent = RenderPage(requestedContent.PagePath);
+                contentString = renderedPageContent.ToHtmlString();
+                // now put it in the cache for later use
+                WebCache.Set(cacheKey, contentString, minutesToCache: App.CacheDuration, slidingExpiration: false);
+            }
+
+            @Html.Raw(contentString);
+        } else
+        {
+            @RenderPage(requestedContent.PagePath);
+        }
+    }
+}

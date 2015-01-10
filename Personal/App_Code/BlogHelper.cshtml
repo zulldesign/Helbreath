@@ -1,0 +1,46 @@
+﻿@using System.Collections.Generic
+@using System.Collections.ObjectModel
+@using System.ServiceModel.Syndication
+@using System.Xml
+
+@functions {
+
+    private static string ConcatenateAuthorNames(Collection<SyndicationPerson> authors) {
+        string[] names = new string[authors.Count];
+        for (int i = 0; i < names.Length; i++) {
+            names[i] = authors[i].Name;
+        }
+
+        return String.Join(", ", names);
+    }
+
+    public static List<FeedItem> GetFeedItems(string blogUrl, int numberOfItems = 5) {
+        numberOfItems = Math.Max(numberOfItems, 0);
+
+        var results = new List<FeedItem>();
+        if (numberOfItems == 0) {
+            return results;
+        }
+
+        using (var reader = XmlReader.Create(blogUrl)) {
+            SyndicationFeed feed = SyndicationFeed.Load(reader);
+            foreach (var item in feed.Items) {
+                var feedItem = new FeedItem(
+                    id: item.Id,
+                    title: item.Title.Text,
+                    author: ConcatenateAuthorNames(item.Authors),
+                    content: item.Summary != null ? item.Summary.Text : item.Title.Text,
+                    publishedDate: item.PublishDate,
+                    photoUrl: null,
+                    webUrl: item.Links.Count > 0 ? item.Links[0].Uri.ToString() : null
+                );
+
+                results.Add(feedItem);
+                if (results.Count == numberOfItems) {
+                    break;
+                }
+            }
+        }
+        return results.ToList();
+    }
+}

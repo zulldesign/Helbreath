@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>@Page.Title</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="~/Content/jquery.mobile-1.0.min.css" />
+        <link rel="stylesheet" href="~/Content/Site.mobile.css" />
+        <script src="~/Scripts/modernizr-2.5.3.js"></script>
+        <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+        <script src="~/Scripts/jquery.mobile-1.0.min.js"></script>
+
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        <div id="page" class="group" data-role="page">
+            <div data-role="header" data-theme="c">
+
+                <div data-role="header" data-theme="c"> 
+	                <h1>Your Name</h1> 
+                </div>
+
+                <div class="intro">
+                    <p>Let's write a bit about you. Since this is a personal site, tell us something funny. 
+                    Something insightful. Something deep. Maybe you like green eggs and ham? Or long walks on the beach?</p>
+                </div>
+
+
+
+                <div id="nav" data-role="navbar">
+                    <ul>
+                        @foreach (var contentPage in App.ContentPages) {
+                            if (contentPage.Title == Page.Title) {
+                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header" class="ui-btn-active">@contentPage.Header</a></li>
+                            } else {
+                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header">@contentPage.Header</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <section>                
+                @RenderBody()
+            </section>
+        </div>
+    </body>
+</html>

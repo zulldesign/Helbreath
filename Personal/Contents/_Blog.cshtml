@@ -1,0 +1,27 @@
+﻿@{
+    //Example: http://www.zdnet.com/blog/microsoft/rss
+    string blogUrl = "";
+}
+
+@if (String.IsNullOrEmpty(blogUrl)) {
+    <p>
+        Welcome to the RSS page! Please view the Contents/_Blog.cshtml page and provide a
+        URL for the blog that you would like to display.  Note that this page only supports 
+        RSS 2.0 and Atom 1.0 feeds.
+    </p>
+} else {
+    var feedItems = BlogHelper.GetFeedItems(blogUrl);
+    foreach (var item in feedItems) {
+        <article class="newsitem">
+            <div class="newsbody">
+                <header>
+                    <h1>@item.Title</h1>
+                    <h2>@item.Author</h2>
+                </header>
+                <p class="pubdate">Published: <span>@item.PublishedDate.ToLocalTime().DateTime</span></p>
+                <p>@Html.Raw(item.HtmlContent)</p>
+                <a href="@item.WebUrl" target="_blank" data-role="button">Read more</a>
+            </div>
+        </article>
+    }
+}

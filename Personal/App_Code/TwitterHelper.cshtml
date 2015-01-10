@@ -1,0 +1,46 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using System.Web.Helpers
+@using System.Xml
+
+@functions {
+    public static List<FeedItem> GetUserTimelime(string screenName) {
+        var tweetUrl = "https://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&screen_name=" + HttpUtility.UrlEncode(screenName);
+
+        var results = new List<FeedItem>();
+        
+        using (var client = new WebClient()) {
+            try {
+                string content = client.DownloadString(tweetUrl);
+                dynamic tweets = Json.Decode(content);
+
+                foreach (dynamic tweet in tweets) {
+                    var item = new FeedItem(
+                        (string)tweet.id.ToString(),
+                        (string)tweet.user.screen_name,
+                        (string)tweet.user.name,
+                        (string)tweet.text,
+                        DateTimeOffset.ParseExact((string)tweet.created_at, "ddd MMM dd HH:mm:ss zzz yyyy", System.Globalization.CultureInfo.InvariantCulture),
+                        photoUrl: null,
+                        webUrl: null);
+
+                    results.Add(item);
+                }
+            } catch (Exception) {}
+        }
+
+        return results;
+    }
+}
+
+@helper ReplyToTweet(string tweetId) {
+    <a data-role="button" href="http://twitter.com/intent/tweet?in_reply_to=@Server.UrlEncode(tweetId)">Reply</a>
+}
+
+@helper Retweet(string tweetId) {
+    <a data-role="button" href="http://twitter.com/intent/retweet?tweet_id=@Server.UrlEncode(tweetId)">Retweet</a>
+}
+
+@helper FavoriteTweet(string tweetId) {
+    <a data-role="button" href="http://twitter.com/intent/favorite?tweet_id=@Server.UrlEncode(tweetId)">Favorite</a>
+}

@@ -1,0 +1,124 @@
+/* CSS Document */
+
+#body {
+	font-size: 12px;
+	color: #ede5d8;
+	font-style: normal;
+	font-weight: normal;
+	font: "Verdana, Arial, Helvetica, sans-serif";
+}
+
+p {
+	font-size: 12px;
+	color: #ede5d8;
+	font-style: normal;
+	font-weight: normal;
+	font: "Verdana, Arial, Helvetica, sans-serif";
+}
+
+h1 {
+	font-size: 14px;
+	color: #fdc675;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	font-size: 18px;
+	color: #ede5d8;
+	font-style: normal;
+	font-weight: bold;
+	font-family: "Copperplate Gothic Bold";
+}
+
+#Title {
+	font-size: 30px;
+	color: #ffffff;
+	font-style: normal;
+	font-weight: normal;
+	font-family: "Copperplate Gothic Bold";
+	text-align: center;
+}
+
+/* Links */
+
+A:visited {
+	color: "#ffff22" ;
+	font-weight: bold;
+}
+
+A:hover {
+	color:"#ffff33" ;
+	font-weight: bold;
+}
+
+A:link {
+	color:"#ffff44" ;
+	font-weight: bold;
+}
+
+A:active {
+	color:"#ffff55" ;
+	font-weight: bold;
+}
+
+LI.list1 {list-style: disc; 
+}
+
+/* Tables */
+  CAPTION.MYTABLE
+  {
+     background-color:#ede5d8;
+     color:#787460;
+     border-width:2px;
+     border-color:black;
+	font: "Verdana, Arial, Helvetica, sans-serif";	 
+  }
+
+  TABLE.MYTABLE
+  { 
+	font: "Verdana, Arial, Helvetica, sans-serif";
+     border-collapse:collapse;
+     font-size: 12px;
+     background-color:#414f33;
+     border-color:#414f33;
+     border-width:1px;
+  }
+
+  TH.MYTABLE
+  {
+	font: "Verdana, Arial, Helvetica, sans-serif";
+     font-size: 12px;
+     background-color:#414f33;
+     color:white;
+     border-style:solid;
+     border-width: 1;
+     border-color:#787460;
+  }
+
+
+  TR.MYTABLE
+  { 
+     font-size: 12px;
+     background-color: #606d53;
+     color: #ede5d8;
+     border-style: solid;
+     border-width: 1px;
+     text-align: left;
+	font: "Verdana, Arial, Helvetica, sans-serif";	
+  }
+
+  TD.MYTABLE
+  {  
+     font-size: 12px;
+     background-color:#606d53;
+     color: #ede5d8;
+     border-style:solid;
+     border-width:1px;
+     text-align:left;
+	font: "Verdana, Arial, Helvetica, sans-serif";	 
+  }
+  
+
+
